@@ -79,18 +79,18 @@ public class Main extends Application {
 				int subTotalInt = 0; 
 				
 				if (deckListView.getSelectionModel().getSelectedItem() != null) 
-					subTotalInt += prices.get(deckListView.getSelectionModel().getSelectedItem()).intValue();
+					subTotalInt += prices.get(deckListView.getSelectionModel().getSelectedItem());
 				
 				if (truckListView.getSelectionModel().getSelectedItem() != null) 
-					subTotalInt += prices.get(deckListView.getSelectionModel().getSelectedItem()).intValue();
-				
+					subTotalInt += prices.get(deckListView.getSelectionModel().getSelectedItem());
+					
 				if (wheeListView.getSelectionModel().getSelectedItem() != null) 
-					subTotalInt += prices.get(deckListView.getSelectionModel().getSelectedItem()).intValue();
+					subTotalInt += prices.get(deckListView.getSelectionModel().getSelectedItem());
 				
 				if (miscListView.getSelectionModel().getSelectedItem() != null) 
-					subTotalInt += prices.get(deckListView.getSelectionModel().getSelectedItem()).intValue();
+					subTotalInt += prices.get(deckListView.getSelectionModel().getSelectedItem());
 				
-				subTotal.setText(String.format("$%.2f", subTotalInt)); //Error Here
+				subTotal.setText(String.format("$%.2f", (float) subTotalInt));
 				salesTax.setText(String.format("$%.2f", subTotalInt * 0.07));
 				total.setText(String.format("$%.2f", subTotalInt * 1.07)); 
 			});
